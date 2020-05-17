@@ -1,6 +1,6 @@
 {
   "name": "strictts",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Stricter tsc/tslint config defaults to bring safer developer experience",
   "main": "tsconfig.ts",
   "repository": {
@@ -13,7 +13,10 @@
     "config",
     "blueprint",
     "bootstrap",
-    "typesafe"
+    "typesafe",
+    "safe",
+    "project",
+    "starter"
   ],
   "author": "Iurii Komarov <iuriikomarov@icloud.com>",
   "license": "MIT",
