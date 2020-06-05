@@ -2,6 +2,7 @@
     "author": "Iurii Komarov <iuriikomarov@icloud.com>",
     "description": "Stricter tsc/tslint config defaults to bring safer developer experience",
     "files": [
+        "tsconfig-*.json",
         "tsconfig.json",
         "tslint-*.json",
         "tslint.json"
@@ -25,5 +26,5 @@
         "type": "git",
         "url": "git@github.com:iuriikomarov/strictts.git"
     },
-    "version": "0.1.5"
+    "version": "0.1.7"
 }

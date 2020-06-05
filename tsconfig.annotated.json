@@ -75,14 +75,6 @@
         // https://www.typescriptlang.org/tsconfig#sourceRoot
         // "sourceRoot": null,
 
-        // Enables the generation of sourcemap files. These files allow debuggers and other tools to display the original TypeScript source code when actually working with the emitted JavaScript files. Source map files are emitted as .js.map (or .jsx.map) files next to the corresponding .js output file.
-        // https://www.typescriptlang.org/tsconfig#sourceMap
-        // "sourceMap": false,
-
-        // Generates a source map for .d.ts files which map back to the original .ts source file. This will allow editors such as VS Code to go to the original .ts file when using features like Go to Definition.
-        // https://www.typescriptlang.org/tsconfig#declarationMap
-        // "declarationMap": false,
-
 
         // Experimental
         // ------------
