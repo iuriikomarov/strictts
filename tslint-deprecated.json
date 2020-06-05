@@ -1,0 +1,8 @@
+{
+    "extends": "strictts/tslint-full.json",
+    "rules": {
+        "no-unused-variable": false,
+        "no-use-before-declare": false,
+        "typeof-compare": false
+    }
+}

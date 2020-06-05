@@ -1,12 +1,12 @@
 {
-    "name": "strictts",
-    "version": "0.1.3",
+    "author": "Iurii Komarov <iuriikomarov@icloud.com>",
     "description": "Stricter tsc/tslint config defaults to bring safer developer experience",
-    "main": "tsconfig.ts",
-    "repository": {
-        "type": "git",
-        "url": "git@github.com:iuriikomarov/strictts.git"
-    },
+    "files": [
+        "tsconfig.json",
+        "tslint-*.json",
+        "tslint.json"
+    ],
+    "homepage": "https://github.com/iuriikomarov/strictts",
     "keywords": [
         "typescript",
         "tslint",
@@ -18,11 +18,12 @@
         "project",
         "starter"
     ],
-    "author": "Iurii Komarov <iuriikomarov@icloud.com>",
     "license": "MIT",
-    "homepage": "https://github.com/iuriikomarov/strictts",
-    "files": [
-        "tsconfig.json",
-        "tslint-*.json"
-    ]
+    "main": "tsconfig.ts",
+    "name": "strictts",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:iuriikomarov/strictts.git"
+    },
+    "version": "0.1.5"
 }

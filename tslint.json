@@ -1,0 +1,189 @@
+{
+    "extends": "strictts/tslint-deprecated.json",
+    "rules": {
+        "array-type": [
+            true,
+            "generic"
+        ],
+        "ban-types": [
+            true,
+            [
+                "null",
+                "Do not use null type"
+            ],
+            [
+                "String",
+                "Use string."
+            ],
+            [
+                "Number",
+                "Use number."
+            ],
+            [
+                "BigInt",
+                "Use bigint."
+            ],
+            [
+                "Boolean",
+                "Use boolean."
+            ],
+            [
+                "Symbol",
+                "Use symbol."
+            ],
+            [
+                "Object",
+                "Use {}."
+            ]
+        ],
+        "comment-type": [
+            true,
+            "doc"
+        ],
+        "curly": [
+            true,
+            "ignore-same-line"
+        ],
+        "cyclomatic-complexity": [
+            true,
+            20
+        ],
+        "file-name-casing": [
+            true,
+            {
+                ".ts$": "camel-case",
+                ".tsx$": "pascal-case"
+            }
+        ],
+        "indent": [
+            true,
+            "spaces",
+            4
+        ],
+        "interface-name": [
+            true,
+            "never-prefix"
+        ],
+        "linebreak-style": [
+            true,
+            "LF"
+        ],
+        "max-classes-per-file": [
+            true,
+            1
+        ],
+        "max-file-line-count": [
+            true,
+            700
+        ],
+        "max-line-length": [
+            true,
+            120
+        ],
+        "member-access": [
+            true,
+            "no-public"
+        ],
+        "member-ordering": [
+            true,
+            {
+                "order": "instance-sandwich"
+            }
+        ],
+        "no-void-expression": [
+            true,
+            "ignore-arrow-function-shorthand"
+        ],
+        "object-literal-key-quotes": [
+            true,
+            "consistent-as-needed"
+        ],
+        "one-line": [
+            true,
+            "check-catch",
+            "check-finally",
+            "check-else",
+            "check-open-brace",
+            "check-whitespace"
+        ],
+        "ordered-imports": [
+            true,
+            "lowercase-first"
+        ],
+        "quotemark": [
+            true,
+            "double",
+            "jsx-double",
+            "avoid-template"
+        ],
+        "semicolon": [
+            true,
+            "never",
+            "ignore-bound-class-methods"
+        ],
+        "space-before-function-paren": [
+            true,
+            "never"
+        ],
+        "space-within-parens": [
+            true,
+            "never"
+        ],
+        "trailing-comma": [
+            true,
+            {
+                "esSpecCompliant": true,
+                "multiline": {
+                    "arrays": "always",
+                    "functions": "always",
+                    "objects": "always",
+                    "typeLiterals": "never"
+                },
+                "singleline": "never"
+            }
+        ],
+        "type-literal-delimiter": [
+            false,
+            {
+                "singleLine": "always"
+            }
+        ],
+        "typedef-whitespace": [
+            true,
+            {
+                "call-signature": "nospace",
+                "index-signature": "nospace",
+                "parameter": "nospace",
+                "property-declaration": "nospace",
+                "variable-declaration": "nospace"
+            },
+            {
+                "call-signature": "onespace",
+                "index-signature": "onespace",
+                "parameter": "onespace",
+                "property-declaration": "onespace",
+                "variable-declaration": "onespace"
+            }
+        ],
+        "variable-name": {
+            "options": [
+                "ban-keywords",
+                "check-format",
+                "allow-pascal-case",
+                "require-const-for-all-caps"
+            ]
+        },
+        "whitespace": [
+            true,
+            "check-branch",
+            "check-decl",
+            "check-operator",
+            "check-module",
+            "check-separator",
+            "check-rest-spread",
+            "check-type",
+            "check-typecast",
+            "check-type-operator"
+        ]
+    }
+}
