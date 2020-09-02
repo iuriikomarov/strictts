@@ -135,6 +135,10 @@
         // https://www.typescriptlang.org/tsconfig#declarationDir
         // "declarationDir": null,
 
+        // In multi-project TypeScript programs, TypeScript will load all of the available projects into memory in order to provide accurate results for editor responses which require a full knowledge graph like ‘Find All References’.
+        // https://www.typescriptlang.org/tsconfig#disableReferencedProjectLoad
+        // "disableReferencedProjectLoad": null
+
         // To avoid a possible memory bloat issue when working with very large JavaScript projects, there is an upper limit to the amount of memory TypeScript will allocate.
         // https://www.typescriptlang.org/tsconfig#disableSizeLimit
         // "disableSizeLimit": false,
@@ -167,10 +171,6 @@
         // https://www.typescriptlang.org/tsconfig#generateCpuProfile
         // "generateCpuProfile": null,
 
-        // For certain downleveling operations, TypeScript uses some helper code for operations like extending class, spreading arrays or objects, and async operations. By default, these helpers are inserted into files which use them. This can result in code duplication if the same helper is used in many different modules.
-        // https://www.typescriptlang.org/tsconfig#importHelpers
-        // "importHelpers": false,
-
         // This flag controls how import works.
         // https://www.typescriptlang.org/tsconfig#importsNotUsedAsValues
         // "importsNotUsedAsValues": "remove",
@@ -178,6 +178,10 @@
         // Changes the function called in .js files when compiling JSX Elements. The most common change is to use "h" or "preact.h" instead of the default "React.createElement" if using preact.
         // https://www.typescriptlang.org/tsconfig#jsxFactory
         // "jsxFactory": "React.createElement",
+
+        // Specify the JSX fragment factory function to use when targeting react JSX emit with jsxFactory compiler option is specified, e.g. Fragment.
+        // https://www.typescriptlang.org/tsconfig#jsxFragmentFactory
+        // "jsxFragmentFactory": "React.Fragment",
 
         // Print names of generated files part of the compilation to the terminal.
         // https://www.typescriptlang.org/tsconfig#listEmittedFiles
@@ -202,10 +206,6 @@
         // Do not emit compiler output files like JavaScript source code, source-maps or declarations if any errors were reported.
         // https://www.typescriptlang.org/tsconfig#noEmitOnError
         // "noEmitOnError": false,
-
-        // Do not truncate error messages.
-        // https://www.typescriptlang.org/tsconfig#noErrorTruncation
-        // "noErrorTruncation": false,
 
         // You shouldn’t need this. By default, when emitting a module file to a non-ES6 target, TypeScript emits a "use strict"; prologue at the top of the file. This setting disables the prologue.
         // https://www.typescriptlang.org/tsconfig#noImplicitUseStrict
