@@ -55,6 +55,7 @@
             true,
             20
         ],
+        "file-header": false,
         "file-name-casing": [
             true,
             {
@@ -97,6 +98,10 @@
                 "order": "instance-sandwich"
             }
         ],
+        "newline-per-chained-call": false,
+        "no-default-export": false,
+        "no-default-import": false,
+        "no-magic-numbers": false,
         "no-void-expression": [
             true,
             "ignore-arrow-function-shorthand"
