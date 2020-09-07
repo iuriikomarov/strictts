@@ -36,8 +36,15 @@
                 "Use {}."
             ]
         ],
+        "comment-format": [
+            true,
+            "check-space",
+            "check-lowercase",
+            "allow-trailing-lowercase"
+        ],
         "comment-type": [
             true,
+            "singleline",
             "doc"
         ],
         "curly": [
