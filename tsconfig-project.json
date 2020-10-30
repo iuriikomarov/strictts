@@ -5,7 +5,7 @@
         "downlevelIteration": true,
         "jsx": "react",
         "lib": [
-            "es2016"
+            "es2019"
         ],
         "module": "es6",
         "noEmit": false,

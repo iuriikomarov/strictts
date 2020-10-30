@@ -18,11 +18,11 @@ and define project-specific options.
 
 `tsconfig.json` does not define any options from [project](https://www.typescriptlang.org/tsconfig#Basic_Options_6172) and [module resolution](https://www.typescriptlang.org/tsconfig#Module_Resolution_Options_6174) sections since usually they are related mostly to project layout and JS/TS stack legacy.
 
-`tsconfig-project.json` is a recommended place to go if you start pure TS project aimed ES2016 runtimes.
+`tsconfig-project.json` is a recommended place to go if you start pure TS project aimed ES2019 runtimes.
 
-I'm working on the [React.js UI framework](https://ui.poptop.uk.com/latest/) using TypeScript compiler configured with these defaults. The project contains more than 20k lines of code and thrown **zero** runtime exceptions (from ES2016-compliant environments) for more than six months in production.
+I'm working on the [React.js UI framework](https://ui.poptop.uk.com/latest/) using TypeScript compiler configured with these defaults. The project contains more than 20k lines of code and thrown **zero** runtime exceptions (from ES2019-compliant environments) for more than six months in production.
 
-I do not include `lib.dom` to default compilation to ensure global namespace be pure ES2016 prelude.
+I do not include `lib.dom` to default compilation to ensure global namespace be pure ES2019 prelude.
 
 I do:
 

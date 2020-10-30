@@ -47,7 +47,7 @@
         // Control which of standart TS lib files explicitly included to compilation.
         // https://www.staging-typescript.org/tsconfig#lib
         "lib": [
-            "es2016"
+            "es2019"
         ],
 
         // Sets the module system for the program.
