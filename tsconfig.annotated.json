@@ -47,6 +47,10 @@
         // https://www.typescriptlang.org/tsconfig#noImplicitReturns
         "noImplicitReturns": true,
 
+        // Turning on noUncheckedIndexedAccess will add undefined to any un-declared field in the type.
+        // https://www.typescriptlang.org/tsconfig#noUncheckedIndexedAccess
+        "noUncheckedIndexedAccess": true,
+
         // Report errors on unused locals.
         // https://www.typescriptlang.org/tsconfig#noUnusedLocals
         "noUnusedLocals": true,
@@ -131,6 +135,10 @@
         // https://www.typescriptlang.org/tsconfig#assumeChangesOnlyAffectDirectDependencies
         // "assumeChangesOnlyAffectDirectDependencies": false,
 
+        // When you mix declaration and outFile the resulting .d.ts needs to know what the root name of the module is so that paths can be correctly resolved internally.
+        // https://www.typescriptlang.org/tsconfig#bundledPackageName
+        // "bundledPackageName": null,
+
         // Offers a way to configure the root directory for where declaration files are emitted.
         // https://www.typescriptlang.org/tsconfig#declarationDir
         // "declarationDir": null,
@@ -182,6 +190,10 @@
         // Specify the JSX fragment factory function to use when targeting react JSX emit with jsxFactory compiler option is specified, e.g. Fragment.
         // https://www.typescriptlang.org/tsconfig#jsxFragmentFactory
         // "jsxFragmentFactory": "React.Fragment",
+
+        // Declares the module specifier to be used for importing the jsx and jsxs factory functions when using jsx as "react-jsx" or "react-jsxdev" which were introduced in TypeScript 4.1.
+        // https://www.typescriptlang.org/tsconfig#jsxImportSource
+        // "jsxImportSource": "react"
 
         // Print names of generated files part of the compilation to the terminal.
         // https://www.typescriptlang.org/tsconfig#listEmittedFiles
