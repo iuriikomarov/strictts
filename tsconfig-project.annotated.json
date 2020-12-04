@@ -84,7 +84,7 @@
 
         // Modern browsers support all ES6 features, so ES6 is a good choice. You might choose to set a lower target if your code is deployed to older environments, or a higher target if your code is guaranteed to run in newer environments.
         // https://www.staging-typescript.org/tsconfig#target
-        "target": "ES2016",
+        "target": "ES2017",
 
         // This setting lets you specify a file for storing incremental compilation information as a part of composite projects which enables faster building of larger TypeScript codebases.
         // https://www.staging-typescript.org/tsconfig#tsBuildInfoFile

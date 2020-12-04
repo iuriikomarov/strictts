@@ -10,7 +10,7 @@
         "module": "es6",
         "noEmit": false,
         "removeComments": true,
-        "target": "ES2016",
+        "target": "ES2017",
         "typeRoots": [],
         "types": []
     },
