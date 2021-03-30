@@ -47,6 +47,10 @@
         // https://www.typescriptlang.org/tsconfig#noImplicitReturns
         "noImplicitReturns": true,
 
+        // This setting ensures consistency between accessing a field via the “dot” (obj.key) syntax, and “indexed” (obj["key"]) and the way which the property is declared in the type.
+        // https://www.typescriptlang.org/tsconfig#noPropertyAccessFromIndexSignature
+        "noPropertyAccessFromIndexSignature": true,
+
         // Turning on noUncheckedIndexedAccess will add undefined to any un-declared field in the type.
         // https://www.typescriptlang.org/tsconfig#noUncheckedIndexedAccess
         "noUncheckedIndexedAccess": true,
@@ -166,6 +170,10 @@
         // Only emit .d.ts files; do not emit .js files.
         // https://www.typescriptlang.org/tsconfig#emitDeclarationOnly
         // "emitDeclarationOnly": false,
+
+        // Print names of files which TypeScript sees as a part of your project and the reason they are part of the compilation.
+        // https://www.typescriptlang.org/tsconfig#explainFiles
+        // "explainFile": false
 
         // You can use this flag to discover where TypeScript is spending it’s time when compiling. This is a tool used for understanding the performance characteristics of your codebase overall.
         // https://www.typescriptlang.org/tsconfig#extendedDiagnostics
