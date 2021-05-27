@@ -36,12 +36,36 @@
         "strictPropertyInitialization": true,
 
 
+        // Source maps
+        // -----------
+
+        // When set, instead of writing out a .js.map file to provide source maps, TypeScript will embed the source map content in the .js files. Although this results in larger JS files, it can be convenient in some scenarios. For example, you might want to debug JS files on a webserver that doesn’t allow .map files to be served.
+        // https://www.typescriptlang.org/tsconfig#inlineSourceMap
+        // "inlineSourceMap": false,
+
+        // When set, TypeScript will include the original content of the .ts file as an embedded string in the source map. This is often useful in the same cases as inlineSourceMap.
+        // https://www.typescriptlang.org/tsconfig#inlineSources
+        // "inlineSources": false,
+
+        // Specifies the location where debugger should locate map files instead of generated locations.
+        // https://www.typescriptlang.org/tsconfig#mapRoot
+        // "mapRoot": null,
+
+        // Specify the location where a debugger should locate TypeScript files instead of relative source locations.
+        // https://www.typescriptlang.org/tsconfig#sourceRoot
+        // "sourceRoot": null,
+
+
         // Linter Checks
         // -------------
 
         // Report errors for fallthrough cases in switch statements. Ensures that any non-empty case inside a switch statement includes either break or return. This means you won’t accidentally ship a case fallthrough bug.
         // https://www.typescriptlang.org/tsconfig/#noFallthroughCasesInSwitch
         "noFallthroughCasesInSwitch": true,
+
+        // When working with classes which use inheritance, it’s possible for a sub-class to get “out of sync” with the functions it overloads when they are renamed in the base class.
+        // https://www.typescriptlang.org/tsconfig#noImplicitOverride
+        "noImplicitOverride": true,
 
         // When enabled, TypeScript will check all code paths in a function to ensure they return a value.
         // https://www.typescriptlang.org/tsconfig#noImplicitReturns
@@ -64,64 +88,16 @@
         "noUnusedParameters": true,
 
 
-        // Source maps
-        // -----------
-
-        // When set, instead of writing out a .js.map file to provide source maps, TypeScript will embed the source map content in the .js files. Although this results in larger JS files, it can be convenient in some scenarios. For example, you might want to debug JS files on a webserver that doesn’t allow .map files to be served.
-        // https://www.typescriptlang.org/tsconfig#inlineSourceMap
-        "inlineSourceMap": true,
-
-        // When set, TypeScript will include the original content of the .ts file as an embedded string in the source map. This is often useful in the same cases as inlineSourceMap.
-        // https://www.typescriptlang.org/tsconfig#inlineSources
-        "inlineSources": true,
-
-        // Specifies the location where debugger should locate map files instead of generated locations.
-        // https://www.typescriptlang.org/tsconfig#mapRoot
-        // "mapRoot": null,
-
-        // Specify the location where a debugger should locate TypeScript files instead of relative source locations.
-        // https://www.typescriptlang.org/tsconfig#sourceRoot
-        // "sourceRoot": null,
-
-
         // Experimental
         // ------------
 
         // Enables experimental support for emitting type metadata for decorators which works with the module reflect-metadata.
         // https://www.typescriptlang.org/tsconfig#emitDecoratorMetadata
-        "emitDecoratorMetadata": false,
+        "emitDecoratorMetadata": true,
 
         // Enables experimental support for decorators, which is in stage 2 of the TC39 standardization process.
         // https://www.typescriptlang.org/tsconfig#experimentalDecorators
         "experimentalDecorators": true,
-
-
-        // Command Line
-        // ------------
-
-        // Whether to keep outdated console output in watch mode instead of clearing the screen every time a change happened.
-        // https://www.typescriptlang.org/tsconfig#preserveWatchOutput
-        // "preserveWatchOutput": false,
-
-        // Stylize errors and messages using color and context, this is on by default — offers you a chance to have less terse, single colored messages from the compiler.
-        // https://www.typescriptlang.org/tsconfig#pretty
-        // "pretty": true,
-
-
-        // Watch options
-        // -------------
-
-        // When using file system events, this option specifies the polling strategy that gets used when the system runs out of native file watchers and/or doesn’t support native file watchers.
-        // https://www.typescriptlang.org/tsconfig#fallbackPolling
-        "fallbackPolling": "dynamicPriorityPolling",
-
-        // The strategy for how entire directory trees are watched under systems that lack recursive file-watching functionality.
-        // https://www.typescriptlang.org/tsconfig#watchDirectory
-        // "watchDirectory": "useFsEvents",
-
-        // The strategy for how individual files are watched.
-        // https://www.typescriptlang.org/tsconfig#watchFile
-        // "watchFile": "useFsEvents",
 
 
         // Advanced
@@ -138,10 +114,6 @@
         // When this option is enabled, TypeScript will avoid rechecking/rebuilding all truly possibly-affected files, and only recheck/rebuild files that have changed as well as files that directly import them
         // https://www.typescriptlang.org/tsconfig#assumeChangesOnlyAffectDirectDependencies
         // "assumeChangesOnlyAffectDirectDependencies": false,
-
-        // When you mix declaration and outFile the resulting .d.ts needs to know what the root name of the module is so that paths can be correctly resolved internally.
-        // https://www.typescriptlang.org/tsconfig#bundledPackageName
-        // "bundledPackageName": null,
 
         // Offers a way to configure the root directory for where declaration files are emitted.
         // https://www.typescriptlang.org/tsconfig#declarationDir
@@ -173,7 +145,7 @@
 
         // Print names of files which TypeScript sees as a part of your project and the reason they are part of the compilation.
         // https://www.typescriptlang.org/tsconfig#explainFiles
-        // "explainFile": false
+        // "explainFiles": false
 
         // You can use this flag to discover where TypeScript is spending it’s time when compiling. This is a tool used for understanding the performance characteristics of your codebase overall.
         // https://www.typescriptlang.org/tsconfig#extendedDiagnostics
@@ -205,7 +177,7 @@
 
         // Print names of generated files part of the compilation to the terminal.
         // https://www.typescriptlang.org/tsconfig#listEmittedFiles
-        "listEmittedFiles": true,
+        // "listEmittedFiles": false,
 
         // Print names of files part of the compilation. This is useful when you are not sure that TypeScript has included a file you expected.
         // https://www.typescriptlang.org/tsconfig#listFiles
@@ -225,7 +197,7 @@
 
         // Do not emit compiler output files like JavaScript source code, source-maps or declarations if any errors were reported.
         // https://www.typescriptlang.org/tsconfig#noEmitOnError
-        // "noEmitOnError": false,
+        "noEmitOnError": true,
 
         // You shouldn’t need this. By default, when emitting a module file to a non-ES6 target, TypeScript emits a "use strict"; prologue at the top of the file. This setting disables the prologue.
         // https://www.typescriptlang.org/tsconfig#noImplicitUseStrict
@@ -237,7 +209,7 @@
 
         // By default, TypeScript will examine the initial set of files for import and <reference> directives and add these resolved files to your program. If noResolve is set, this process doesn’t happen. However, import statements are still checked to see if they resolve to a valid module, so you’ll need to make sure this is satisfied by some other means.
         // https://www.typescriptlang.org/tsconfig#noResolve
-        "noResolve": true,
+        // "noResolve": false,
 
         // TypeScript will unify type parameters when comparing two generic functions.
         // https://www.typescriptlang.org/tsconfig#noStrictGenericChecks
@@ -257,15 +229,15 @@
 
         // Use --skipLibCheck instead. Skip type checking of default library declaration files.
         // https://www.typescriptlang.org/tsconfig#skipDefaultLibCheck
-        "skipDefaultLibCheck": false,
+        "skipDefaultLibCheck": true,
 
         // Skip type checking of declaration files.
         // https://www.typescriptlang.org/tsconfig#skipLibCheck
-        "skipLibCheck": false,
+        "skipLibCheck": true,
 
         // Do not emit declarations for code that has an @internal annotation in it’s JSDoc comment.
         // https://www.typescriptlang.org/tsconfig#stripInternal
-        // "stripInternal": null,
+        // "stripInternal": false,
 
         // This disables reporting of excess property errors.
         // https://www.typescriptlang.org/tsconfig#suppressExcessPropertyErrors
@@ -282,5 +254,43 @@
         // This flag is used as part of migrating to the upcoming standard version of class fields.
         // https://www.typescriptlang.org/tsconfig#useDefineForClassFields
         // "useDefineForClassFields": false,
+
+
+        // Command Line
+        // ------------
+
+        // Whether to keep outdated console output in watch mode instead of clearing the screen every time a change happened.
+        // https://www.typescriptlang.org/tsconfig#preserveWatchOutput
+        // "preserveWatchOutput": false,
+
+        // Stylize errors and messages using color and context, this is on by default — offers you a chance to have less terse, single colored messages from the compiler.
+        // https://www.typescriptlang.org/tsconfig#pretty
+        // "pretty": true,
+    },
+
+    "watchOptions": {
+        // The strategy for how individual files are watched.
+        // https://www.typescriptlang.org/tsconfig#watch-watchFile
+        // "watchFile": "useFsEvents",
+
+        // The strategy for how entire directory trees are watched under systems that lack recursive file-watching functionality.
+        // https://www.typescriptlang.org/tsconfig#watch-watchDirectory
+        // "watchDirectory": "useFsEvents",
+
+        // When using file system events, this option specifies the polling strategy that gets used when the system runs out of native file watchers and/or doesn’t support native file watchers.
+        // https://www.typescriptlang.org/tsconfig#watch-fallbackPolling
+        // "fallbackPolling": null,
+
+        // Synchronously call callbacks and update the state of directory watchers on platforms that don`t support recursive watching natively.
+        // https://www.typescriptlang.org/tsconfig#watch-synchronousWatchDirectory
+        // "synchronousWatchDirectory": null,
+
+        // You can use excludeFiles to drastically reduce the number of files which are watched during --watch.
+        // https://www.typescriptlang.org/tsconfig#watch-excludeDirectories
+        // "excludeDirectories": null,
+
+        // You can use excludeFiles to remove a set of specific files from the files which are watched.
+        // https://www.typescriptlang.org/tsconfig#watch-excludeFiles
+        // "excludeFiles": null,
     }
 }
