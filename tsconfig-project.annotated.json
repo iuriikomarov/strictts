@@ -1,102 +1,8 @@
 {
     "extends": "strictts",
     "compilerOptions": {
-        // Project Options
-        // ---------------
-
-        // Allow JavaScript files to be imported inside your project, instead of just .ts and .tsx files.
-        // https://www.staging-typescript.org/tsconfig#allowJs
-        // "allowJs": false,
-
-        // Works in tandem with allowJs. When checkJs is enabled then errors are reported in JavaScript files.
-        // https://www.staging-typescript.org/tsconfig#checkJs
-        // "checkJs": false,
-
-        // The composite option enforces certain constraints which make it possible for build tools to quickly determine if a project has been built yet.
-        // https://www.staging-typescript.org/tsconfig#composite
-        "composite": true,
-
-        // Generate .d.ts files for every TypeScript or JavaScript file inside your project.
-        // https://www.staging-typescript.org/tsconfig#declaration
-        "declaration": false,
-
-        // Generates a source map for .d.ts files which map back to the original .ts source file. This will allow editors such as VS Code to go to the original .ts file when using features like Go to Definition.
-        // https://www.staging-typescript.org/tsconfig#declarationMap
-        // "declarationMap": false,
-
-        // This flag is to enable support for a more accurate implementation of how modern JavaScript iterates through new concepts in older JavaScript runtimes.
-        // https://www.staging-typescript.org/tsconfig#downlevelIteration
-        // "downlevelIteration": false,
-
-        // If the importHelpers flag is on, typescript runtime helper functions are imported from the tslib module.
-        // https://www.staging-typescript.org/tsconfig#importHelpers
-        // "importHelpers": false,
-
-        // Tells TypeScript to save information about the project graph from the last compilation to files stored on disk.
-        // https://www.staging-typescript.org/tsconfig#incremental
-        "incremental": true,
-
-        // If true, ts-loader operates on a single file at a time, which means they it can’t apply code transforms that depend on understanding the full type system.
-        // https://www.staging-typescript.org/tsconfig#isolatedModules
-        // "isolatedModules": false,
-
-        // Controls how JSX constructs are emitted in JavaScript files.
-        // https://www.staging-typescript.org/tsconfig#jsx
-        // "jsx": "react",
-
-        // Control which of standart TS lib files explicitly included to compilation.
-        // https://www.staging-typescript.org/tsconfig#lib
-        "lib": [
-            "es2019"
-        ],
-
-        // Sets the module system for the program.
-        // https://www.staging-typescript.org/tsconfig#module
-        "module": "es6",
-
-        // Do not emit compiler output files like JavaScript source code, source-maps or declarations.
-        // https://www.staging-typescript.org/tsconfig#noEmit
-        "noEmit": false,
-
-        // If specified, .js (as well as .d.ts, .js.map, etc.) files will be emitted into this directory.
-        // https://www.staging-typescript.org/tsconfig#outDir
-        // "outDir": null,
-
-        // If specified, all global (non-module) files will be concatenated into the single output file specified.
-        // https://www.staging-typescript.org/tsconfig#outFile
-        // "outFile": null,
-
-        // List of language service plugins to run inside the editor.
-        // https://www.staging-typescript.org/tsconfig#plugins
-        // "plugins": null,
-
-        // Strips all comments from TypeScript files when converting into JavaScript.
-        // https://www.staging-typescript.org/tsconfig#removeComments
-        "removeComments": true,
-
-        // The longest common path of all non-declaration input files.
-        // https://www.staging-typescript.org/tsconfig#rootDir
-        // "rootDir": null,
-
-        // Enables the generation of sourcemap files. These files allow debuggers and other tools to display the original TypeScript source code when actually working with the emitted JavaScript files. Source map files are emitted as .js.map (or .jsx.map) files next to the corresponding .js output file.
-        // https://www.staging-typescript.org/tsconfig#sourceMap
-        // "sourceMap": false,
-
-        // Modern browsers support all ES6 features, so ES6 is a good choice. You might choose to set a lower target if your code is deployed to older environments, or a higher target if your code is guaranteed to run in newer environments.
-        // https://www.staging-typescript.org/tsconfig#target
-        "target": "ES2019",
-
-        // This setting lets you specify a file for storing incremental compilation information as a part of composite projects which enables faster building of larger TypeScript codebases.
-        // https://www.staging-typescript.org/tsconfig#tsBuildInfoFile
-        // "tsBuildInfoFile": ".tsbuildinfo"
-
-
-        // Module resolution
-        // -----------------
-
-        // When set to true, allowSyntheticDefaultImports allows you to write an babel-like default import.
-        // https://www.staging-typescript.org/tsconfig#allowSyntheticDefaultImports
-        "allowSyntheticDefaultImports": false,
+        // Modules
+        // -------
 
         // When set to true, allowUmdGlobalAccess lets you access UMD exports as globals from inside module files.
         // https://www.staging-typescript.org/tsconfig#allowUmdGlobalAccess
@@ -106,17 +12,29 @@
         // https://www.staging-typescript.org/tsconfig#baseUrl
         // "baseUrl": null,
 
-        // Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports.
-        // https://www.staging-typescript.org/tsconfig#esModuleInterop
-        // "esModuleInterop": false,
+        // Sets the module system for the program.
+        // https://www.staging-typescript.org/tsconfig#module
+        "module": "es2020",
+
+        // Specify the module resolution strategy.
+        // https://www.typescriptlang.org/tsconfig#moduleResolution
+        // "moduleResolution": null,
+
+        // By default, TypeScript will examine the initial set of files for import and <reference> directives and add these resolved files to your program. If noResolve is set, this process doesn’t happen. However, import statements are still checked to see if they resolve to a valid module, so you’ll need to make sure this is satisfied by some other means.
+        // https://www.typescriptlang.org/tsconfig#noResolve
+        // "noResolve": false,
 
         // A series of entries which re-map imports to lookup locations relative to the baseUrl.
         // https://www.staging-typescript.org/tsconfig#paths
         // "paths": null,
 
-        // This is to reflect the same flag in Node.js; which does not resolve the real path of symlinks.
-        // https://www.staging-typescript.org/tsconfig#preserveSymlinks
-        // "preserveSymlinks": false,
+        // Allows importing modules with a ‘.json’ extension, which is a common practice in node projects.
+        // https://www.typescriptlang.org/tsconfig#resolveJsonModule
+        "resolveJsonModule": true,
+
+        // The longest common path of all non-declaration input files.
+        // https://www.staging-typescript.org/tsconfig#rootDir
+        // "rootDir": null,
 
         // Using rootDirs, you can inform the compiler that there are many “virtual” directories acting as a single root.
         // https://www.staging-typescript.org/tsconfig#rootDirs
@@ -124,10 +42,219 @@
 
         // If typeRoots is specified, only packages under typeRoots will be included.
         // https://www.staging-typescript.org/tsconfig#typeRoots
-        "typeRoots": [],
+        // "typeRoots": null,
 
         // If types is specified, only packages listed will be included in the global scope.
         // https://www.staging-typescript.org/tsconfig#types
-        "types": [],
+        // "types": null,
+
+
+        // Emit
+        // ----
+
+        // Generate .d.ts files for every TypeScript or JavaScript file inside your project.
+        // https://www.staging-typescript.org/tsconfig#declaration
+        "declaration": false,
+
+        // Offers a way to configure the root directory for where declaration files are emitted.
+        // https://www.typescriptlang.org/tsconfig#declarationDir
+        // "declarationDir": null,
+
+        // Generates a source map for .d.ts files which map back to the original .ts source file. This will allow editors such as VS Code to go to the original .ts file when using features like Go to Definition.
+        // https://www.staging-typescript.org/tsconfig#declarationMap
+        // "declarationMap": false,
+
+        // This flag is to enable support for a more accurate implementation of how modern JavaScript iterates through new concepts in older JavaScript runtimes.
+        // https://www.staging-typescript.org/tsconfig#downlevelIteration
+        // "downlevelIteration": false,
+
+        // Controls whether TypeScript will emit a byte order mark (BOM) when writing output files.
+        // https://www.typescriptlang.org/tsconfig#emitBOM
+        // "emitBOM": false,
+
+        // Only emit .d.ts files; do not emit .js files.
+        // https://www.typescriptlang.org/tsconfig#emitDeclarationOnly
+        // "emitDeclarationOnly": false,
+
+        // If the importHelpers flag is on, typescript runtime helper functions are imported from the tslib module.
+        // https://www.staging-typescript.org/tsconfig#importHelpers
+        // "importHelpers": false,
+
+        // This flag controls how import works.
+        // https://www.typescriptlang.org/tsconfig#importsNotUsedAsValues
+        "importsNotUsedAsValues": "error",
+
+        // When set, instead of writing out a .js.map file to provide source maps, TypeScript will embed the source map content in the .js files. Although this results in larger JS files, it can be convenient in some scenarios. For example, you might want to debug JS files on a webserver that doesn’t allow .map files to be served.
+        // https://www.typescriptlang.org/tsconfig#inlineSourceMap
+        // "inlineSourceMap": false,
+
+        // When set, TypeScript will include the original content of the .ts file as an embedded string in the source map. This is often useful in the same cases as inlineSourceMap.
+        // https://www.typescriptlang.org/tsconfig#inlineSources
+        // "inlineSources": false,
+
+        // Specifies the location where debugger should locate map files instead of generated locations.
+        // https://www.typescriptlang.org/tsconfig#mapRoot
+        // "mapRoot": null,
+
+        // Specify the end of line sequence to be used when emitting files: ‘CRLF’ (dos) or ‘LF’ (unix).
+        // https://www.typescriptlang.org/tsconfig#newLine
+        // "newLine": null,
+
+        // Do not emit compiler output files like JavaScript source code, source-maps or declarations.
+        // https://www.staging-typescript.org/tsconfig#noEmit
+        // "noEmit": false,
+
+        // Instead of importing helpers with importHelpers, you can provide implementations in the global scope for the helpers you use and completely turn off emitting of helper functions.
+        // https://www.typescriptlang.org/tsconfig#noEmitHelpers
+        // "noEmitHelpers": false,
+
+        // Do not emit compiler output files like JavaScript source code, source-maps or declarations if any errors were reported.
+        // https://www.typescriptlang.org/tsconfig#noEmitOnError
+        "noEmitOnError": true,
+
+        // If specified, .js (as well as .d.ts, .js.map, etc.) files will be emitted into this directory.
+        // https://www.staging-typescript.org/tsconfig#outDir
+        // "outDir": null,
+
+        // If specified, all global (non-module) files will be concatenated into the single output file specified.
+        // https://www.staging-typescript.org/tsconfig#outFile
+        // "outFile": null,
+
+        // Do not erase const enum declarations in generated code. const enums provide a way to reduce the overall memory footprint of your application at runtime by emitting the enum value instead of a reference.
+        // https://www.typescriptlang.org/tsconfig#preserveConstEnums
+        // "preserveConstEnums": false,
+
+        // When combined with isolatedModules: imported types must be marked as type-only because compilers that process single files at a time have no way of knowing whether imports are values that appear unused, or a type that must be removed in order to avoid a runtime crash.
+        // https://www.typescriptlang.org/tsconfig#preserveValueImports
+        "preserveValueImports": false,
+
+        // Strips all comments from TypeScript files when converting into JavaScript.
+        // https://www.staging-typescript.org/tsconfig#removeComments
+        "removeComments": true,
+
+        // Enables the generation of sourcemap files. These files allow debuggers and other tools to display the original TypeScript source code when actually working with the emitted JavaScript files. Source map files are emitted as .js.map (or .jsx.map) files next to the corresponding .js output file.
+        // https://www.staging-typescript.org/tsconfig#sourceMap
+        // "sourceMap": false,
+
+        // Specify the location where a debugger should locate TypeScript files instead of relative source locations.
+        // https://www.typescriptlang.org/tsconfig#sourceRoot
+        // "sourceRoot": null,
+
+        // Do not emit declarations for code that has an @internal annotation in its JSDoc comment. This is an internal compiler option; use at your own risk.
+        // https://www.typescriptlang.org/tsconfig#stripInternal
+        // "stripInternal": null
+
+
+        // JavaScript Support
+        // ------------------
+
+        // Allow JavaScript files to be imported inside your project, instead of just .ts and .tsx files.
+        // https://www.staging-typescript.org/tsconfig#allowJs
+        // "allowJs": false,
+
+        // Works in tandem with allowJs. When checkJs is enabled then errors are reported in JavaScript files.
+        // https://www.staging-typescript.org/tsconfig#checkJs
+        // "checkJs": false,
+
+        // The maximum dependency depth to search under node_modules and load JavaScript files.
+        // https://www.typescriptlang.org/tsconfig#maxNodeModuleJsDepth
+        // "maxNodeModuleJsDepth": 0,
+
+
+        // Editor Support
+        // --------------
+
+        // To avoid a possible memory bloat issues when working with very large JavaScript projects, there is an upper limit to the amount of memory TypeScript will allocate. 
+        // https://www.typescriptlang.org/tsconfig#disableSizeLimit
+        // "disableSizeLimit": false
+
+        // List of language service plugins to run inside the editor.
+        // https://www.typescriptlang.org/tsconfig#plugins
+        // "plugins": []
+
+
+        // Compiler Diagnostics
+
+        // Used to output diagnostic information for debugging. 
+        // https://www.typescriptlang.org/tsconfig#diagnostics
+        // "diagnostics": false,
+
+        // Print names of files which TypeScript sees as a part of your project and the reason they are part of the compilation.
+        // https://www.typescriptlang.org/tsconfig#explainFiles
+        // "explainFiles": false
+
+        // You can use this flag to discover where TypeScript is spending it’s time when compiling. This is a tool used for understanding the performance characteristics of your codebase overall.
+        // https://www.typescriptlang.org/tsconfig#extendedDiagnostics
+        // "extendedDiagnostics": false,
+
+        // This option gives you the chance to have TypeScript emit a v8 CPU profile during the compiler run. The CPU profile can provide insight into why your builds may be slow.
+        // https://www.typescriptlang.org/tsconfig#generateCpuProfile
+        // "generateCpuProfile": null,
+
+        // Print names of generated files part of the compilation to the terminal.
+        // https://www.typescriptlang.org/tsconfig#listEmittedFiles
+        // "listEmittedFiles": false,
+
+        // Print names of files part of the compilation. This is useful when you are not sure that TypeScript has included a file you expected.
+        // https://www.typescriptlang.org/tsconfig#listFiles
+        // "listFiles": false,
+
+        // When you are trying to debug why a module isn’t being included. You can set traceResolutions to true to have TypeScript print information about its resolution process for each processed file.
+        // https://www.typescriptlang.org/tsconfig#traceResolution
+        // "traceResolution": false,
+
+
+        // Projects
+        // --------
+
+        // The composite option enforces certain constraints which make it possible for build tools to quickly determine if a project has been built yet.
+        // https://www.staging-typescript.org/tsconfig#composite
+        // "composite": false,
+
+        // In multi-project TypeScript programs, TypeScript will load all of the available projects into memory in order to provide accurate results for editor responses which require a full knowledge graph like ‘Find All References’.
+        // https://www.typescriptlang.org/tsconfig#disableReferencedProjectLoad
+        // "disableReferencedProjectLoad": null
+
+        // When working with composite TypeScript projects, this option provides a way to declare that you do not want a project to be included when using features like find all references or jump to definition in an editor.
+        // https://www.typescriptlang.org/tsconfig#disableSolutionSearching
+        // "disableSolutionSearching": null,
+
+        // When working with composite TypeScript projects, this option provides a way to go back to the pre-3.7 behavior where d.ts files were used to as the boundaries between modules. In 3.7 the source of truth is now your TypeScript files.
+        // https://www.typescriptlang.org/tsconfig#disableSourceOfProjectReferenceRedirect
+        // "disableSourceOfProjectReferenceRedirect": null,
+
+        // Tells TypeScript to save information about the project graph from the last compilation to files stored on disk.
+        // https://www.staging-typescript.org/tsconfig#incremental
+        // "incremental": false,
+
+        // This setting lets you specify a file for storing incremental compilation information as a part of composite projects which enables faster building of larger TypeScript codebases.
+        // https://www.staging-typescript.org/tsconfig#tsBuildInfoFile
+        // "tsBuildInfoFile": ".tsbuildinfo",
+    },
+    
+    "watchOptions": {
+        // The strategy for how individual files are watched.
+        // https://www.typescriptlang.org/tsconfig#watch-watchFile
+        // "watchFile": "useFsEvents",
+
+        // The strategy for how entire directory trees are watched under systems that lack recursive file-watching functionality.
+        // https://www.typescriptlang.org/tsconfig#watch-watchDirectory
+        // "watchDirectory": "useFsEvents",
+
+        // When using file system events, this option specifies the polling strategy that gets used when the system runs out of native file watchers and/or doesn’t support native file watchers.
+        // https://www.typescriptlang.org/tsconfig#watch-fallbackPolling
+        // "fallbackPolling": null,
+
+        // Synchronously call callbacks and update the state of directory watchers on platforms that don`t support recursive watching natively.
+        // https://www.typescriptlang.org/tsconfig#watch-synchronousWatchDirectory
+        // "synchronousWatchDirectory": null,
+
+        // You can use excludeFiles to drastically reduce the number of files which are watched during --watch.
+        // https://www.typescriptlang.org/tsconfig#watch-excludeDirectories
+        // "excludeDirectories": null,
+
+        // You can use excludeFiles to remove a set of specific files from the files which are watched.
+        // https://www.typescriptlang.org/tsconfig#watch-excludeFiles
+        // "excludeFiles": null,
     }
 }

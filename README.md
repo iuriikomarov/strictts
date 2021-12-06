@@ -1,6 +1,7 @@
-TypeScript config reasonable defaults with type safety focus.
+TypeScript config `compilerOptions` reasonable defaults with type safety focus.
 
-See [annotated version](https://github.com/iuriikomarov/strictts/blob/main/tsconfig.annotated.json).
+Read [annotated version](https://github.com/iuriikomarov/strictts/blob/main/tsconfig.annotated.json) to get more details about each changed default. Configs are grouped into sections as they are in official `compilerOptions` [reference](https://www.typescriptlang.org/tsconfig).
+
 
 Start new TypeScript project with `tsconfig.json`:
 
@@ -14,11 +15,7 @@ Start new TypeScript project with `tsconfig.json`:
 }
 ```
 
-and define project-specific options.
-
-`tsconfig.json` does not define any options from [project](https://www.typescriptlang.org/tsconfig#Basic_Options_6172) and [module resolution](https://www.typescriptlang.org/tsconfig#Module_Resolution_Options_6174) sections since usually they are related mostly to project layout and JS/TS stack legacy.
-
-`tsconfig-project.json` is a recommended place to go if you start pure TS project aimed ES2019 runtimes.
+and define project-specific options (take `tsconfig-project.json` as default). `tsconfig-project.json` is a recommended place to go if you start pure TS project aimed ES2019 runtimes.
 
 I'm working on the [React.js UI framework](https://ui.poptop.uk.com/latest/) using TypeScript compiler configured with these defaults. The project contains more than 20k lines of code and thrown **zero** runtime exceptions (from ES2019-compliant environments) for more than six months in production.
 
