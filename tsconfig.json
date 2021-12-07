@@ -1,10 +1,18 @@
 {
     "compilerOptions": {
+        "allowSyntheticDefaultImports": false,
+        "allowUnreachableCode": false,
+        "allowUnusedLabels": false,
         "alwaysStrict": true,
         "emitDecoratorMetadata": true,
+        "esModuleInterop": true,
+        "exactOptionalPropertyTypes": true,
         "experimentalDecorators": true,
         "forceConsistentCasingInFileNames": true,
-        "noEmitOnError": true,
+        "jsx": "react",
+        "lib": [
+            "es2019"
+        ],
         "noFallthroughCasesInSwitch": true,
         "noImplicitAny": true,
         "noImplicitOverride": true,
@@ -14,11 +22,15 @@
         "noUncheckedIndexedAccess": true,
         "noUnusedLocals": true,
         "noUnusedParameters": true,
+        "preserveSymlinks": false,
+        "pretty": true,
         "skipDefaultLibCheck": true,
         "skipLibCheck": true,
         "strictBindCallApply": true,
         "strictFunctionTypes": true,
         "strictNullChecks": true,
-        "strictPropertyInitialization": true
+        "strictPropertyInitialization": true,
+        "target": "ES2019",
+        "useUnknownInCatchVariables": true
     }
 }

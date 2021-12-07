@@ -1,18 +1,14 @@
 {
     "compilerOptions": {
-        "allowSyntheticDefaultImports": false,
         "declaration": false,
-        "downlevelIteration": true,
-        "jsx": "react",
-        "lib": [
-            "es2019"
-        ],
-        "module": "es6",
-        "noEmit": false,
+        "importsNotUsedAsValues": "error",
+        "module": "es2020",
+        "noEmitOnError": true,
+        "preserveValueImports": false,
         "removeComments": true,
-        "target": "ES2017",
-        "typeRoots": [],
-        "types": []
+        "resolveJsonModule": true
     },
-    "extends": "strictts"
+    "extends": "strictts",
+    "watchOptions": {
+    }
 }
